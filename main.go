@@ -12,7 +12,7 @@ const httpAddr = ":8080"
 func main() {
 	fmt.Println("Starting server on port", httpAddr)
 
-	srv := gin.new()
+	srv := gin.New()
 	srv.GET("/health", healthHandler)
 
 	log.Fatal(srv.Run(httpAddr))
